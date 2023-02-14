@@ -6,5 +6,6 @@
   max_fail_percentage: 0
   become: yes
   become_method: su
+  become_user: root
   roles: 
   - { role: 'TEST' }
