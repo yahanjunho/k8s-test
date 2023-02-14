@@ -1,0 +1,10 @@
+---
+- name: test
+  gather_facts: yes
+  hosts: localhost
+  any_errors_fatal: true
+  max_fail_percentage: 0
+  become: yes
+  become_method: sudo
+  roles: 
+  - { role: 'TEST' }

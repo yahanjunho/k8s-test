@@ -1,0 +1,16 @@
+---
+- name: test
+  ansible.builtin.debug:
+    msg: "{{ lookup('ansible.builtin.env', 'HOSTNAME') }} is the HOME Environment Variable."
+
+- name: check python version
+  command: "/usr/libexec/platform-python -V"
+  register: result
+
+- name: debug
+  debug:
+    var: result
+
+- name: pause
+  ansible.builtin.pause:
+    minutes: 60
